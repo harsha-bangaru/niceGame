@@ -15,8 +15,13 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const server = http.createServer(app);
-app.get('/', (req, res) => {  res.send('<h1>Hello world</h1>');});
-server.listen(3000, () => {  console.log('listening on *:3000');});
+
+app.get('/', (req, res) => {  
+  res.send('<h1>Hello world</h1>');
+});
+server.listen(3000, () => {  
+  console.log('listening on *:3000');
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
